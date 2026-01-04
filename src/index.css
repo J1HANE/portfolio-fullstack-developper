@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-purple: #9D00FF;
+  --color-neon-dark: #111111;
+  --animate-bounce-slow: bounce 3s infinite;
+}
+
+:root {
+  background-color: #111;
+  color: white;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #111;
+  font-family: 'Poppins', sans-serif;
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px #9D00FF, 0 0 20px #9D00FF, 0 0 40px #9D00FF;
+}
+
+.neon-border {
+  box-shadow: 0 0 10px #9D00FF, inset 0 0 5px #9D00FF;
+  border: 1px solid #9D00FF;
+}
+
+.snowflake {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fall 3s linear infinite;
+  z-index: 9999;
+  filter: blur(2px);
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.titleTxt {
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  font-size: 38px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9D00FF;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b84dff;
+}
